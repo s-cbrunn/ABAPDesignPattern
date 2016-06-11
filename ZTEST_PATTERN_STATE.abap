@@ -13,19 +13,19 @@ INTERFACE lif_state.
   METHODS: open.
   METHODS: close.
 
-
 ENDINTERFACE.
 
 CLASS lcl_door DEFINITION.
 
   PUBLIC SECTION.
     METHODS: constructor.
-    METHODS: set_current_state IMPORTING im_state TYPE REF TO lif_state.
 
     METHODS: open.
     METHODS: close.
 
   PRIVATE SECTION.
+    METHODS: set_current_state IMPORTING im_state TYPE REF TO lif_state.
+
     DATA: mo_current_state TYPE REF TO lif_state.
 
 ENDCLASS.
